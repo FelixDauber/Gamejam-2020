@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2413068265856866048}
   - component: {fileID: 2413068265856866049}
   - component: {fileID: 2413068265856866050}
+  - component: {fileID: 1747077703}
   m_Layer: 6
   m_Name: White Bloodcells
   m_TagString: Untagged
@@ -107,7 +108,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -160,6 +161,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   escapeRange: 2
   wanderRange: 15
+--- !u!114 &1747077703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2413068265856866051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59e42623645f04408fbf1a5211ad5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  stunLength: 2
+  knockback: 5
 --- !u!1 &3288451243800344149
 GameObject:
   m_ObjectHideFlags: 0
