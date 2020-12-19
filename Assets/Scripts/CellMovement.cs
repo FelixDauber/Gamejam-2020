@@ -31,7 +31,7 @@ public class CellMovement : MonoBehaviour
     {
         //rb.AddForce((targetPoint - new Vector2(transform.position.x, transform.position.y)).normalized * acceleration * Time.deltaTime);
 
-        rb.velocity = (targetPoint - new Vector2(transform.position.x, transform.position.y)) * acceleration; 
+        rb.velocity = (targetPoint - new Vector2(transform.position.x, transform.position.y)) * acceleration;
 
         if (rb.velocity.magnitude > maxSpeed)
         {

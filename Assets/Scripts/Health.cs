@@ -7,22 +7,22 @@ public class Health : MonoBehaviour
     Rigidbody2D rb;
     CellMovement cellMovement;
 
+    public float maxHealth = 100;
+    float health;
+
     public float stunLength = 2;
     float stunTime;
-    public float knockback = 5;
+    public float knockback = 700;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         cellMovement = GetComponent<CellMovement>();
+        health = maxHealth;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Damage(transform.position + new Vector3(0, 10), 0);
-        }
         if (stunTime > 0)
         {
             stunTime -= Time.deltaTime;
@@ -34,10 +34,16 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void Damage(Vector3 hitFrom, float damage)
+    public void Damage(Vector3 hitFrom, float knockback, float damage)
     {
+        if (stunTime > 0) return;
         stunTime = stunLength;
         cellMovement.enabled = false;
-        rb.AddForce(hitFrom * knockback);
+        rb.AddForce((transform.position - hitFrom) * knockback);
+        health -= damage;
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
