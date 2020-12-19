@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7616166672959523048}
   - component: {fileID: 4531331575337261596}
   - component: {fileID: 6043841953042357060}
+  - component: {fileID: 2642652474513335511}
   m_Layer: 0
   m_Name: EnemyPlating
   m_TagString: Untagged
@@ -75,6 +76,24 @@ MonoBehaviour:
   damageCooldown: 1
   damageTime: 0
   knockback: 700
+--- !u!114 &2642652474513335511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322345963622975307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3539f36388b0f47aecff1481f26a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: EnemyPlating
+  Cost: 3
+  Damage: 0
+  Defense: 3
+  FireRate: 0
+  IgnoresPlating: 0
 --- !u!1 &8118789740166229131
 GameObject:
   m_ObjectHideFlags: 0
