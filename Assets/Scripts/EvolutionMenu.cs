@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EvolutionMenu : MonoBehaviour
 {
     [SerializeField] private GameObject[] evolutionSlots;
     [SerializeField] private GameObject[] evolutions;
+    [SerializeField] private GameObject[] evolutionButtons;
     [SerializeField] private GameObject player;
     [SerializeField] private string playerName;
+
     public int DNA;
     private void Start(){
         player = GameObject.Find(playerName);
@@ -18,7 +21,7 @@ public class EvolutionMenu : MonoBehaviour
         evolutionSlots[4] = GameObject.Find("PlayerEvol5");
     }
     public void OpenMenu(){
-
+        //make the menu pop up
     }
     public void ApplyEvolution(GameObject evolution, GameObject evolveSlot){
         //make if statement here that checks the cost for the evolution compared to how much DNA you have. 
