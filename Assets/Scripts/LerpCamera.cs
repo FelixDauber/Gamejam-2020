@@ -10,6 +10,7 @@ public class LerpCamera : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector3.Lerp(target.position, transform.position, speed * Time.deltaTime) + cameraOffset;
+        if(target != null)
+            transform.position = Vector3.Lerp(target.position, transform.position, speed * Time.deltaTime) + cameraOffset;
     }
 }

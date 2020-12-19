@@ -8,6 +8,7 @@ public class DamageDealer : MonoBehaviour
     public float damageCooldown = 1;
     public float damageTime;
     public float knockback = 700;
+    public bool destroyUponImpact = false;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,6 +18,25 @@ public class DamageDealer : MonoBehaviour
             if (health != null)
             {
                 health.Damage(transform.position, knockback, damage);
+            }
+        }
+        else
+        {
+            damageTime -= Time.deltaTime;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (damageTime <= 0 && !collider.CompareTag(tag))
+        {
+            Health health = collider.gameObject.GetComponent<Health>();
+            if (health != null)
+            {
+                health.Damage(transform.position, knockback, damage);
+                if (destroyUponImpact)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
         else
