@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             Physics.Raycast(ray, out hit);
+            Vector3 newVec = hit.point - transform.position;
+            transform.up = new Vector3(newVec.x, newVec.y, 0);
             cellMovement.targetPoint = hit.point;
         }
     }
