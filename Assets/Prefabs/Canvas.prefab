@@ -54,8 +54,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  evolutions: []
-  DNA: 0
+  evolutions:
+  - {fileID: 2322345963622975307, guid: 62fba2f3b2c127644af08fc1ee48b70c, type: 3}
+  - {fileID: 2322345963622975307, guid: 6ff5617004069e94bae290925b39d47c, type: 3}
+  - {fileID: 2322345963622975307, guid: d81add302044f6946ae01c4a1bf9ce9f, type: 3}
+  - {fileID: 2322345963622975307, guid: e59ea879b05a0ae4da269050ce6a4e2c, type: 3}
+  - {fileID: 2322345963622975307, guid: 9e151426dcc20a5438b347568a363712, type: 3}
+  - {fileID: 2322345963622975307, guid: f9df31480b39ad84cbec373540bfbae7, type: 3}
+  player: {fileID: 0}
+  playerName: xD
+  DNA: 100
 --- !u!1 &9066151826379811161
 GameObject:
   m_ObjectHideFlags: 0
