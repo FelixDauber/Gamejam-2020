@@ -7,7 +7,7 @@ public class DamageDealer : MonoBehaviour
     public float damage = 40;
     public float damageCooldown = 1;
     public float damageTime;
-    public float knockback = 100;
+    public float knockback = 700;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
