@@ -13,6 +13,11 @@ public class EvolutionMenu : MonoBehaviour
 
     private void Start(){
         player = GameObject.Find(playerName);
+        evolutionSlots[0] = GameObject.Find("PlayerEvol1");
+        evolutionSlots[1] = GameObject.Find("PlayerEvol2");
+        evolutionSlots[2] = GameObject.Find("PlayerEvol3");
+        evolutionSlots[3] = GameObject.Find("PlayerEvol4");
+        evolutionSlots[4] = GameObject.Find("PlayerEvol5");
     }
     public void OpenMenu(){
 

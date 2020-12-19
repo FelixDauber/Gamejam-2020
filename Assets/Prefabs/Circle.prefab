@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7834066711142508049}
   m_Layer: 0
-  m_Name: EvolPos1
+  m_Name: PlayerEvol1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -488,7 +488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1240064424389577710}
   m_Layer: 0
-  m_Name: EvolPos3
+  m_Name: PlayerEvol3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -605,7 +605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3879151259385793014}
   m_Layer: 0
-  m_Name: EvolPos5
+  m_Name: PlayerEvol5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -635,7 +635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6289757469229916007}
   m_Layer: 0
-  m_Name: EvolPos4
+  m_Name: PlayerEvol4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -665,7 +665,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5721105625639481594}
   m_Layer: 0
-  m_Name: EvolPos2
+  m_Name: PlayerEvol2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

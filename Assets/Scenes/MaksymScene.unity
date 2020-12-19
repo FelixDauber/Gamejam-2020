@@ -372,6 +372,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9066151826589913669, guid: 0b6e26d5fe538f64484e4ecafaa4d162, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066151826589913669, guid: 0b6e26d5fe538f64484e4ecafaa4d162, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066151826589913669, guid: 0b6e26d5fe538f64484e4ecafaa4d162, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 9066151826919395278}
+    - target: {fileID: 9066151826589913669, guid: 0b6e26d5fe538f64484e4ecafaa4d162, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066151826589913669, guid: 0b6e26d5fe538f64484e4ecafaa4d162, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066151826589913669, guid: 0b6e26d5fe538f64484e4ecafaa4d162, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: EvolutionMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066151826589913669, guid: 0b6e26d5fe538f64484e4ecafaa4d162, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9066151827328120408, guid: 0b6e26d5fe538f64484e4ecafaa4d162, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -462,3 +490,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b6e26d5fe538f64484e4ecafaa4d162, type: 3}
+--- !u!1 &9066151826919395278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8968374852479630556, guid: 0b6e26d5fe538f64484e4ecafaa4d162, type: 3}
+  m_PrefabInstance: {fileID: 9066151826919395277}
+  m_PrefabAsset: {fileID: 0}
