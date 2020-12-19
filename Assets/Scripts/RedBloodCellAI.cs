@@ -16,7 +16,8 @@ public class RedBloodCellAI : MonoBehaviour
     {
         if(PlayerController.playerController != null && Vector3.Distance(PlayerController.playerController.transform.position, transform.position) < escapeRange)
         {
-            cellMovement.targetPoint = transform.position - PlayerController.playerController.transform.position;
+            //cellMovement.targetPoint = transform.position - PlayerController.playerController.transform.position;
+            cellMovement.targetPoint = transform.position - PlayerController.playerController.transform.position + transform.position;
         }
     }
 }
