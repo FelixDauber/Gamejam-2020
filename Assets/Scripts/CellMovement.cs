@@ -6,6 +6,7 @@ public class CellMovement : MonoBehaviour
 {
     public Vector2 targetPoint;
     private Rigidbody2D rb;
+
     public float acceleration = 10;
     public float maxSpeed = 3;
 
@@ -19,7 +20,7 @@ public class CellMovement : MonoBehaviour
         MoveToTarget();
         //rb.velocity = (targetPoint - transform.position).normalized * speed;
         //rb.AddForce(targetPoint - new Vector2(transform.position.x, transform.position.y).normalized * speed);
-            //rb.velocity = Vector2.zero;
+        //rb.velocity = Vector2.zero;
         //}
         //else
         //{
