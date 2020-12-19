@@ -5,6 +5,19 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     CellMovement cellMovement;
+    public static PlayerController playerController;
+
+    private void Awake()
+    {
+        if(playerController == null)
+        {
+            playerController = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     private void Start()
     {
