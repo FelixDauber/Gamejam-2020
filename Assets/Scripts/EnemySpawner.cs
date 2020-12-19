@@ -24,16 +24,19 @@ public class EnemySpawner : MonoBehaviour
     }
     private void SpawnEnemies(int whichEnemy){
         Transform currentSpawn = spawnPos[Random.Range(0, spawnPos.Length)];
+        GameObject newSpawn;
         switch (whichEnemy)
         {
             case 1:
             //spawn white cell here
-            Instantiate(whiteCell, currentSpawn);
+            newSpawn = Instantiate(whiteCell, currentSpawn);
+            newSpawn.transform.parent = null;
             break;
 
             default:
             //spawn red cell here
-            Instantiate(redCell, currentSpawn);
+            newSpawn = Instantiate(redCell, currentSpawn);
+            newSpawn.transform.parent = null;
             break;
         }
     }

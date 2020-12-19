@@ -5,9 +5,10 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float speed = 2;
-    public void Setup()
+
+    private void Start()
     {
-        
+        Destroy(gameObject, 15);
     }
     void Update()
     {
