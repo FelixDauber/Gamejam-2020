@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    Vector3 pos = new Vector3(200, 200, 0);
     CellMovement cellMovement;
 
     private void Start()
@@ -14,9 +13,12 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        Physics.Raycast(ray, out hit);
-        cellMovement.targetPoint = hit.point;
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            Physics.Raycast(ray, out hit);
+            cellMovement.targetPoint = hit.point;
+        }
     }
 }
