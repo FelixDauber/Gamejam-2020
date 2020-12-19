@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject whiteCell;
     [SerializeField] private GameObject redCell;
-    [SerializeField] private GameObject[] enemies;
+    [SerializeField] private Collider2D[] enemies;
     [SerializeField] private int checkRange;
     [SerializeField] private int maxEnemies;
     [SerializeField] private Transform[] spawnPos;
@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
         InvokeRepeating("CheckForEnemies", 1f, 1f);
     }
     private void CheckForEnemies(){
-        var enemies = Physics.OverlapSphere(this.transform.position, this.checkRange, LayerMask.GetMask("Enemy"));
+        enemies = Physics2D.OverlapCircleAll(this.transform.position, this.checkRange, LayerMask.GetMask("Enemy"));
         if(enemies.Length <= maxEnemies){
             int whichEnemy = Random.Range(0, 2);
             SpawnEnemies(whichEnemy);
