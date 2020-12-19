@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
-    public float damage = 10;
+    public float damage = 40;
     public float damageCooldown = 1;
     public float damageTime;
-    private void OnCollisionStay(Collision collision)
+    public float knockback = 100;
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(damageTime <= 0)
+        if (damageTime <= 0)
         {
             Health health = collision.gameObject.GetComponent<Health>();
-            if(health == null)
+            if (health != null)
             {
-                health = collision.gameObject.GetComponent<Health>();
-            }
-            if(health != null)
-            {
-                health.Damage(transform.position, damage);
+                health.Damage(transform.position, knockback, damage);
             }
         }
         else
