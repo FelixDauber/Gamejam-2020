@@ -36,7 +36,6 @@ public class Health : MonoBehaviour
 
     public void Damage(Vector3 hitFrom, float knockback, float damage)
     {
-        if (stunTime > 0) return;
         stunTime = stunLength;
         cellMovement.enabled = false;
         rb.AddForce((transform.position - hitFrom) * knockback);

@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2413068265856866055}
   - component: {fileID: 2413068265856866048}
   - component: {fileID: 2413068265856866049}
-  - component: {fileID: 2413068265856866050}
   - component: {fileID: 1747077703}
+  - component: {fileID: -930792739312267372}
   m_Layer: 6
   m_Name: White Bloodcells
   m_TagString: Untagged
@@ -147,20 +147,6 @@ MonoBehaviour:
   targetPoint: {x: 0, y: 0}
   acceleration: 10
   maxSpeed: 1
---- !u!114 &2413068265856866050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2413068265856866051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cd85f75b33b48945879a341b2e31238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  escapeRange: 2
-  wanderRange: 15
 --- !u!114 &1747077703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +162,20 @@ MonoBehaviour:
   maxHealth: 100
   stunLength: 2
   knockback: 5
+--- !u!114 &-930792739312267372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2413068265856866051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60fe93809e9de7b43b0ea6a314b6ef72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  engageRange: 10
+  wanderRange: 15
 --- !u!1 &3288451243800344149
 GameObject:
   m_ObjectHideFlags: 0
