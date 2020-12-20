@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     private void Start()
     {
         Destroy(gameObject, 3);
+        transform.Translate(transform.up * 0.5f, Space.World);
     }
     void Update()
     {

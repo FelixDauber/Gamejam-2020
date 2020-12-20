@@ -7,6 +7,10 @@ public class ProjectileShooter : MonoBehaviour
     public float cooldown;
     public GameObject projectilePrefab;
     public float currentCooldown;
+    private void Awake()
+    {
+        currentCooldown = cooldown;
+    }
     void Update()
     {
         currentCooldown -= Time.deltaTime;
