@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class EvolutionMenu : MonoBehaviour
 {
+    public static EvolutionMenu evolutionMenu;
     [SerializeField] private GameObject[] evolutionSlots;
     [SerializeField] private GameObject[] evolutions;
     [SerializeField] private GameObject[] evolutionButtons;
@@ -17,6 +18,7 @@ public class EvolutionMenu : MonoBehaviour
 
     public int DNA;
     private void Start(){
+        evolutionMenu = this;
         player = GameObject.Find(playerName);
         evolutionSlots[0] = GameObject.Find("PlayerEvol1");
         evolutionSlots[1] = GameObject.Find("PlayerEvol2");

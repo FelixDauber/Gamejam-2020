@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     public float stunLength = 2;
     float stunTime;
     public float knockback = 700;
+    public int dNAUponDeath;
 
     private void Awake()
     {
