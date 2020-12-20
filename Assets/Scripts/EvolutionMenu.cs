@@ -27,7 +27,7 @@ public class EvolutionMenu : MonoBehaviour
         }
     }
 
-    private void Start(){
+    private void Awake(){
         evolutionMenu = this;
         player = GameObject.Find(playerName);
         evolutionSlots[0] = GameObject.Find("PlayerEvol1");
