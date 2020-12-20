@@ -10,7 +10,7 @@ public class ToggleUI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) Toggle();
     }
 
-    void Toggle()
+    public void Toggle()
     {
         target.SetActive(!target.activeSelf);
         if (target.activeSelf)
