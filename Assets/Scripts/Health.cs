@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     CellMovement cellMovement;
 
     public float maxHealth = 100;
-    float health;
+    public float health;
 
     public float stunLength = 2;
     float stunTime;

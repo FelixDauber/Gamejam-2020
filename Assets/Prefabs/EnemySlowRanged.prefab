@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7616166672959523048}
   - component: {fileID: 4531331575337261596}
-  - component: {fileID: 6043841953042357060}
   - component: {fileID: 8870323629411646508}
+  - component: {fileID: -9142045625488070685}
   m_Layer: 0
   m_Name: EnemySlowRanged
   m_TagString: Enemy
@@ -60,23 +60,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16160229, y: 0.29744986}
   m_EdgeRadius: 0
---- !u!114 &6043841953042357060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2322345963622975307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7799dadca601afa4fa6f83a4e928bb04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 40
-  damageCooldown: 1
-  damageTime: 0
-  knockback: 700
-  destroyUponImpact: 0
 --- !u!114 &8870323629411646508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +78,21 @@ MonoBehaviour:
   Defense: 0
   FireRate: 30
   IgnoresPlating: 0
+--- !u!114 &-9142045625488070685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322345963622975307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a37582fa89272b14ea2463f3499a67a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 2.5
+  projectilePrefab: {fileID: 2322345963622975307, guid: f2a7f6ffee86c2741832d80d055c689a, type: 3}
+  currentCooldown: 5
 --- !u!1 &8118789740166229131
 GameObject:
   m_ObjectHideFlags: 0

@@ -474,7 +474,7 @@ MonoBehaviour:
   - {fileID: 2322345963622975307, guid: e64e8c2cc01fe774da1c9d4668adff44, type: 3}
   - {fileID: 2322345963622975307, guid: 6554e9fb6d4c3e344980c04e7c77e2e8, type: 3}
   - {fileID: 2322345963622975307, guid: 641a2b959324a0f4fb40dce7884f0d01, type: 3}
-  escapeRange: 2
+  escapeRange: 10
   wanderRange: 15
 --- !u!114 &843486189
 MonoBehaviour:
@@ -489,9 +489,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  health: 0
   stunLength: 2
   knockback: 5
-  dNAUponDeath: 0
+  dNAUponDeath: 1
 --- !u!1 &7208815888083052911
 GameObject:
   m_ObjectHideFlags: 0

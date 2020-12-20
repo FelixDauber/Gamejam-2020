@@ -14,10 +14,14 @@ public class DamageDealer : MonoBehaviour
     {
         if (damageTime <= 0)
         {
-            Health health = collision.gameObject.GetComponent<Health>();
+            Health health = collision.collider.gameObject.GetComponent<Health>();
             if (health != null)
             {
                 health.Damage(transform.position, knockback, damage);
+                if (destroyUponImpact)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
         else
