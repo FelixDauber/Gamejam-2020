@@ -162,6 +162,7 @@ MonoBehaviour:
   maxHealth: 100
   stunLength: 2
   knockback: 5
+  dNAUponDeath: 0
 --- !u!114 &-930792739312267372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +175,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60fe93809e9de7b43b0ea6a314b6ef72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  evolutionSlots:
+  - {fileID: 8863234006454166672}
+  - {fileID: 6575447577300115043}
+  - {fileID: 7251285474750062604}
+  - {fileID: 3288451243800344149}
+  - {fileID: 5411708794124511859}
+  evolutions:
+  - {fileID: 2322345963622975307, guid: 607db6ef50782a640b2c105eba423a9f, type: 3}
+  - {fileID: 2322345963622975307, guid: e64e8c2cc01fe774da1c9d4668adff44, type: 3}
+  - {fileID: 2322345963622975307, guid: e4b952ae83fb84d42adda1898d03c1b0, type: 3}
+  - {fileID: 2322345963622975307, guid: 641a2b959324a0f4fb40dce7884f0d01, type: 3}
+  - {fileID: 2322345963622975307, guid: 6554e9fb6d4c3e344980c04e7c77e2e8, type: 3}
+  - {fileID: 2322345963622975307, guid: 38961cd0b7346c64e8952ed7018d3593, type: 3}
   engageRange: 10
   wanderRange: 15
 --- !u!1 &3288451243800344149

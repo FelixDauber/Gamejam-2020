@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RedBloodCellAI : MonoBehaviour
 {
+    [SerializeField] private GameObject[] evolutionSlots;
+    [SerializeField] private GameObject[] evolutions;
+    private int currentEvol;
     CellMovement cellMovement;
     public float escapeRange;
     public float wanderRange = 15;
@@ -12,6 +15,15 @@ public class RedBloodCellAI : MonoBehaviour
     {
         cellMovement = GetComponent<CellMovement>();
         cellMovement.targetPoint = transform.position;
+    }
+    private void Awake(){
+        foreach (var evol in evolutionSlots){
+        ApplyEvolution(evolutions[Random.Range(0,evolutions.Length - 1)], evolutionSlots[currentEvol]);
+        currentEvol++ ;
+        }
+    }
+    private void ApplyEvolution(GameObject evolution, GameObject evolveSlot){
+        Instantiate(evolution, evolveSlot.transform.position, evolveSlot.transform.rotation, evolveSlot.transform);
     }
 
     void Update()
