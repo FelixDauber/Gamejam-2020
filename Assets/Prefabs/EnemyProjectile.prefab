@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7616166672959523048}
   - component: {fileID: 4531331575337261596}
-  - component: {fileID: 2057591671297926968}
-  - component: {fileID: 4347432462566382598}
+  - component: {fileID: -8536777345931829862}
+  - component: {fileID: 4160977536868764851}
   m_Layer: 0
-  m_Name: EnemyFastRanged
+  m_Name: EnemyProjectile
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0022470355, y: 0.10629861}
+  m_Offset: {x: -0.020673893, y: 0.07353437}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -58,9 +58,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16160229, y: 0.29744986}
+  m_Size: {x: 0.20751096, y: 0.44070947}
   m_EdgeRadius: 0
---- !u!114 &2057591671297926968
+--- !u!114 &-8536777345931829862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,16 +69,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2322345963622975307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af3539f36388b0f47aecff1481f26a4d, type: 3}
+  m_Script: {fileID: 11500000, guid: b7bd30f07afeef34c840f3491c7d1b2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: EnemyFastShooter
-  Cost: 3
-  Damage: 1
-  Defense: 0
-  FireRate: 60
-  IgnoresPlating: 0
---- !u!114 &4347432462566382598
+  speed: 4
+--- !u!114 &4160977536868764851
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,12 +82,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2322345963622975307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a37582fa89272b14ea2463f3499a67a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 7799dadca601afa4fa6f83a4e928bb04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 2.5
-  projectilePrefab: {fileID: 2322345963622975307, guid: aea9412a538495c45b620b65f69a62d8, type: 3}
-  currentCooldown: 0
+  damage: 40
+  damageCooldown: 1
+  damageTime: 0
+  knockback: 250
+  destroyUponImpact: 1
 --- !u!1 &8118789740166229131
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,13 +114,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8118789740166229131}
-  m_LocalRotation: {x: -0, y: -0, z: -0.5735759, w: -0.8191524}
+  m_LocalRotation: {x: 0, y: 0, z: -0.8870109, w: 0.46174863}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children: []
   m_Father: {fileID: 7616166672959523048}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -290}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -125}
 --- !u!212 &6688153542725546707
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -164,7 +161,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4ce8a8b09a9ab5c45828f3c4a78f7d1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa0b0f8e674aa9e4f8ee782c8c80ef96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
