@@ -43,6 +43,7 @@ public class Health : MonoBehaviour
         health -= damage;
         if(health <= 0)
         {
+            EvolutionMenu.evolutionMenu.DNA += dNAUponDeath;
             Destroy(gameObject);
         }
     }
