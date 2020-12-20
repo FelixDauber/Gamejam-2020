@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class EvolutionMenu : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class EvolutionMenu : MonoBehaviour
     [SerializeField] private GameObject[] evolutionButtons;
     [SerializeField] private GameObject player;
     [SerializeField] private string playerName;
+    [SerializeField] private GameObject displayDNA;
+    [SerializeField] private int currentSlot;
+    private int curretnEvolCheck;
 
     public int DNA;
     private void Start(){
@@ -23,11 +27,33 @@ public class EvolutionMenu : MonoBehaviour
     public void OpenMenu(){
         //make the menu pop up
     }
+
+    public void UpdateDNA(){
+        displayDNA.GetComponent<Text>().text = DNA.ToString();
+    }
+
+    public void SellAll(){
+        curretnEvolCheck = 0;
+        foreach (var evol in evolutionSlots)
+        {
+            DNA += evolutionSlots[curretnEvolCheck].GetComponentInChildren<EvolutionInfo>().Cost; 
+            evolutionSlots[curretnEvolCheck].GetComponentInChildren<EvolutionInfo>().DestroySelf();
+            curretnEvolCheck ++;
+        }
+        UpdateDNA();
+    }
+    public void WhichEvolveSlot(int whichSlot){
+        currentSlot = whichSlot;
+    }
+    public void ButtonPress(int whichButton){
+        ApplyEvolution(evolutions[whichButton], evolutionSlots[currentSlot]);
+    }
     public void ApplyEvolution(GameObject evolution, GameObject evolveSlot){
         //make if statement here that checks the cost for the evolution compared to how much DNA you have. 
-        if(DNA - evolution.GetComponent<EvolutionInfo>().Cost >= 0){
+        if(DNA - evolution.GetComponent<EvolutionInfo>().Cost >= 0 && evolveSlot.transform.childCount < 1 ){
             Instantiate(evolution, evolveSlot.transform.position, evolveSlot.transform.rotation, evolveSlot.transform);
             DNA -= evolution.GetComponent<EvolutionInfo>().Cost;
+            UpdateDNA();
         }
     }
 }

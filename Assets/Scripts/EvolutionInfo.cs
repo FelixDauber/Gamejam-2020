@@ -10,4 +10,8 @@ public class EvolutionInfo : MonoBehaviour
     public int Defense;
     public int FireRate;
     public bool IgnoresPlating;
+    
+    public void DestroySelf(){
+        Object.Destroy(this.gameObject);
+    }
 }
