@@ -76,6 +76,7 @@ MonoBehaviour:
   damageCooldown: 1
   damageTime: 0
   knockback: 700
+  destroyUponImpact: 0
 --- !u!114 &3709301372943261213
 MonoBehaviour:
   m_ObjectHideFlags: 0

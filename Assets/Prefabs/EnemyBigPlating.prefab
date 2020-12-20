@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1408463019004258642}
   m_Layer: 0
   m_Name: EnemyBigPlating
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,6 +76,7 @@ MonoBehaviour:
   damageCooldown: 1
   damageTime: 0
   knockback: 700
+  destroyUponImpact: 0
 --- !u!114 &1408463019004258642
 MonoBehaviour:
   m_ObjectHideFlags: 0
