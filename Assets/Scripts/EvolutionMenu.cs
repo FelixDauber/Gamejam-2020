@@ -16,7 +16,17 @@ public class EvolutionMenu : MonoBehaviour
     [SerializeField] private int currentSlot;
     private int curretnEvolCheck;
 
-    public int DNA;
+    public int dNA;
+    public int DNA
+    {
+        get => dNA; 
+        set
+        {
+            dNA = value;
+            UpdateDNA();
+        }
+    }
+
     private void Start(){
         evolutionMenu = this;
         player = GameObject.Find(playerName);
@@ -25,6 +35,7 @@ public class EvolutionMenu : MonoBehaviour
         evolutionSlots[2] = GameObject.Find("PlayerEvol3");
         evolutionSlots[3] = GameObject.Find("PlayerEvol4");
         evolutionSlots[4] = GameObject.Find("PlayerEvol5");
+        UpdateDNA();
     }
     public void OpenMenu(){
         //make the menu pop up

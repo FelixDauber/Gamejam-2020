@@ -480,6 +480,7 @@ MonoBehaviour:
   maxHealth: 100
   stunLength: 2
   knockback: 5
+  dNAUponDeath: 1
 --- !u!1 &7208815888083052911
 GameObject:
   m_ObjectHideFlags: 0
