@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7616166672959523048}
   - component: {fileID: 4531331575337261596}
-  - component: {fileID: 6043841953042357060}
   - component: {fileID: 2642652474513335511}
+  - component: {fileID: 7839910101127306902}
   m_Layer: 0
   m_Name: EnemyPlating
   m_TagString: Enemy
@@ -60,23 +60,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16160229, y: 0.29744986}
   m_EdgeRadius: 0
---- !u!114 &6043841953042357060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2322345963622975307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7799dadca601afa4fa6f83a4e928bb04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 40
-  damageCooldown: 1
-  damageTime: 0
-  knockback: 700
-  destroyUponImpact: 0
 --- !u!114 &2642652474513335511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +78,22 @@ MonoBehaviour:
   Defense: 3
   FireRate: 0
   IgnoresPlating: 0
+--- !u!114 &7839910101127306902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322345963622975307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59e42623645f04408fbf1a5211ad5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  stunLength: 0
+  knockback: 0
+  dNAUponDeath: 0
 --- !u!1 &8118789740166229131
 GameObject:
   m_ObjectHideFlags: 0

@@ -677,7 +677,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3667403108343141615, guid: 0b6e26d5fe538f64484e4ecafaa4d162, type: 3}
       propertyPath: dNA
-      value: 2
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9066151827328120408, guid: 0b6e26d5fe538f64484e4ecafaa4d162, type: 3}
       propertyPath: m_Pivot.x
