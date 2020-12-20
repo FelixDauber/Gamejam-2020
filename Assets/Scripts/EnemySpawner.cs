@@ -14,6 +14,10 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform[] spawnPos;
     private void Start(){
         InvokeRepeating("CheckForEnemies", 1f, 1f);
+        for (int i = 0; i < 10; i++)
+        {
+            SpawnEnemies(Random.Range(0, 2));
+        }
     }
     private void CheckForEnemies(){
         enemies = Physics2D.OverlapCircleAll(this.transform.position, this.checkRange, LayerMask.GetMask("Enemy"));
