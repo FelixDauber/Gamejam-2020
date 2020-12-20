@@ -38,8 +38,10 @@ public class Health : MonoBehaviour
     public void Damage(Vector3 hitFrom, float knockback, float damage)
     {
         stunTime = stunLength;
-        cellMovement.enabled = false;
-        rb.AddForce((transform.position - hitFrom) * knockback);
+        if(cellMovement != null)
+            cellMovement.enabled = false;
+        if(rb != null)
+            rb.AddForce((transform.position - hitFrom) * knockback);
         health -= damage;
         if(health <= 0)
         {

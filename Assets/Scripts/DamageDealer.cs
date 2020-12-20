@@ -12,28 +12,24 @@ public class DamageDealer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (damageTime <= 0)
-        {
-            Health health = collision.collider.gameObject.GetComponent<Health>();
-            if (health != null)
-            {
-                health.Damage(transform.position, knockback, damage);
-                if (destroyUponImpact)
-                {
-                    Destroy(gameObject);
-                }
-            }
-        }
-        else
+        Damage(collision.collider.gameObject);
+    }
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        Damage(collider.gameObject);
+    }
+    public void Update()
+    {
+        if(damageTime > 0)
         {
             damageTime -= Time.deltaTime;
         }
     }
-    private void OnTriggerEnter2D(Collider2D collider)
+    public void Damage(GameObject target)
     {
-        if (damageTime <= 0 && !collider.CompareTag(tag))
+        if (damageTime <= 0)// && !target.CompareTag(tag))
         {
-            Health health = collider.gameObject.GetComponent<Health>();
+            Health health = target.GetComponent<Health>();
             if (health != null)
             {
                 health.Damage(transform.position, knockback, damage);
@@ -42,10 +38,6 @@ public class DamageDealer : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
-        }
-        else
-        {
-            damageTime -= Time.deltaTime;
         }
     }
 }

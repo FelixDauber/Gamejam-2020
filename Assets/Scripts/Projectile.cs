@@ -12,7 +12,16 @@ public class Projectile : MonoBehaviour
     }
     void Update()
     {
-        transform.Translate(transform.up * speed * Time.deltaTime, Space.World);
         //transform.Translate(transform.up * speed * Time.deltaTime);
+        Move();
+    }
+    void Move()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, speed * Time.deltaTime);
+        if (hit.collider != null)
+        {
+            gameObject.GetComponent<DamageDealer>().Damage(hit.collider.gameObject);
+        }
+        transform.Translate(transform.up * speed * Time.deltaTime, Space.World);
     }
 }
