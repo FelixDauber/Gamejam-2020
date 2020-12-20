@@ -8,6 +8,9 @@ public class ProgressionBar : MonoBehaviour
     public static ProgressionBar progressionBar;
     public Text progressionText;
     public int progression;
+    public GameObject winText;
+    public GameObject looseText;
+
     public int Progression
     {
         get => progression;
@@ -31,5 +34,10 @@ public class ProgressionBar : MonoBehaviour
     public void UpdateProgress()
     {
         progressionText.text = $"Progress: {Progression}";
+        if(progression >= 100)
+        {
+            winText.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 }

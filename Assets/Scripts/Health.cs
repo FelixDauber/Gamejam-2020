@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     Rigidbody2D rb;
     CellMovement cellMovement;
+    public GameObject looseText;
 
     public float maxHealth = 100;
     public float health;
@@ -45,6 +46,11 @@ public class Health : MonoBehaviour
         health -= damage;
         if(health <= 0)
         {
+            if(gameObject.name == "Circle")
+            {
+                looseText.SetActive(true);
+                Time.timeScale = 0;
+            }
             EvolutionMenu.evolutionMenu.DNA += dNAUponDeath;
             ProgressionBar.progressionBar.Progression += dNAUponDeath;
             Destroy(gameObject);

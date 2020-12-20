@@ -13,7 +13,7 @@ public class ToggleUI : MonoBehaviour
     public void Toggle()
     {
         target.SetActive(!target.activeSelf);
-        if (target.activeSelf)
+        if (target.activeSelf && Time.timeScale != 0)
         {
             Time.timeScale = 0;
         }
